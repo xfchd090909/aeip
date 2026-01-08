@@ -2,7 +2,7 @@ const axios = require('axios');
 
 exports.handler = async (event, context) => {
   // 定义 API 地址和 Token
-  const API_URL = 'https://api.ipinfo.io/lite/me?token=1a1c0409a4aaca';
+  const API_URL = process.env.IPINFO_TOKEN
 
   try {
     const response = await axios.get(API_URL);
